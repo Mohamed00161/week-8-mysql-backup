@@ -1,0 +1,50 @@
+    -- ============================================
+-- WEEK 8 ASSIGNMENT: MYSQL DATABASE BACKUP
+-- ============================================
+
+-- QUESTION 1: Creating a Complete Database Backup
+--
+-- Command:
+-- mysqldump -u root -p sales > sales_backup.sql
+--
+-- Explanation:
+-- This command creates a complete backup of the sales database.
+--
+-- -u root: Specifies root as the MySQL username.
+-- -p: Prompts the user to enter the MySQL password.
+-- sales: Specifies the database to back up.
+-- > sales_backup.sql: Saves the backup into a SQL file.
+--
+-- Importance of regular database backups:
+-- Regular backups protect important data against accidental deletion,
+-- hardware failure, database corruption, and other unexpected problems.
+-- They also make it possible to restore data when needed.
+
+
+-- ============================================
+-- QUESTION 2: Backing Up All Databases
+-- ============================================
+
+-- Command:
+-- mysqldump -u root -p --all-databases > all_databases_backup.sql
+--
+-- Explanation:
+-- This command creates a backup of every database on the MySQL server.
+--
+-- -u root: Specifies root as the MySQL username.
+-- -p: Prompts the user to enter the MySQL password.
+-- --all-databases: Exports all databases on the server.
+-- > all_databases_backup.sql: Saves the backup into a SQL file.
+--
+-- Importance:
+-- Backing up all databases before migration ensures that all
+-- databases and their structures and data are preserved.
+-- It helps prevent data loss and allows databases to be restored
+-- on the new server if migration problems occur.
+-- ============================================
+-- BACKUP VERIFICATION
+-- ============================================
+-- Both backup commands were executed successfully.
+-- sales_backup.sql contains the sales database backup.
+-- all_databases_backup.sql contains the backup of all databases.
+-- Both backup files were verified after creation.
